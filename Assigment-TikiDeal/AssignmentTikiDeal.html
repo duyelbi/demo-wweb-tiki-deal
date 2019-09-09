@@ -1,0 +1,1835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="AssignmentTikiDeal.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <!-- top promo -->
+        <div class="top-promo">
+            <div class="container">
+                <div class="right">
+                    <a class="top-label" target="_blank"
+                        href="https://chrome.google.com/webstore/detail/tiki-assistant/ncpaceoemnbcjffjpjcgnbaklmkhdmak?hl=en-US&amp;gl=VN&amp;authuser=1"
+                        source="header_partner_offers" title="Trợ Lý TiKi" onclick="">
+                        <img src="image/icon-header-promo/tikiAssistant-icon.png" alt="">
+                        Trợ lý Tiki
+                    </a>
+                    <a class="top-label" target="_blank"
+                        href="https://tiki.vn/top/uu-dai-doi-tac?src=header_partner_offers"
+                        source="header_partner_offers" title="Ưu đãi đối tác" onclick="">
+                        <img src="image/icon-header-promo/uuDaiDoiTac-icon.png" alt="">
+                        Ưu đãi đối tác
+                    </a>
+                    <a class="top-label" target="_blank" href="https://tiki.vn/dat-ve-may-bay?src=header_hotels"
+                        source="header_hotels" title=" Đặt khách sạn" onclick="">
+                        <img src="image/icon-header-promo/datKhachSan-icon.png" alt="">
+                        Đặt khách sạn
+                    </a>
+                    <a class="top-label" target="_blank" href="https://tiki.vn/dat-ve-may-bay?src=header_flights"
+                        source="header_flights" title="Đặt vé máy bay" onclick="">
+                        <img src="image/icon-header-promo/datVeMayBay-icon.png" alt="">
+                        Đặt vé máy bay
+                    </a>
+                    <a class="top-label" target="_blank"
+                        href="https://tiki.vn/chuong-trinh/clearance-sale?src=header_hunting" source="header_hunting"
+                        title="Săn hàng tồn" onclick="">
+                        <img src="image/icon-header-promo/sanHangTon-icon.png" alt="">
+                        Săn hàng tồn
+                    </a>
+                    <a class="top-label" target="_blank" href="https://tiki.vn/deal-hot?src=header_promotion"
+                        source="header_promotion" title="Deal SỐC giảm giá mỗi ngày"
+                        onclick="ga('send','event','tiki-hot','click','header-label')">
+                        <img class="icon-fire" src="image/icon-header-promo/khuyenMaiHot-icon.png" alt="">
+                        Khuyến Mãi HOT
+                    </a>
+                    <a class="top-label" target="_blank" href="https://tiki.vn/hang-ngoai-nhap?src=header_international"
+                        source="header_international" title="Hàng quốc tế" onclick="">
+                        <img src="image/icon-header-promo/hangQuocTe-icon.png" alt="">
+                        Hàng quốc tế
+                    </a>
+                    <a class="top-label" target="_blank"
+                        href="/ban-hang-cung-tiki?ref=header-dropdown&amp;src=header_sell_with_tiki"
+                        title="Kinh doanh cùng Tiki">
+                        <img src="image/icon-header-promo/banHangCungTiki-icon.png" alt="">
+                        Bán hàng cùng Tiki
+                        <img src="image/icon-header-promo/banHangCungTiKi1-icon.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- end top promo -->
+
+        <!-- header-form -->
+        <div class="header-form">
+            <div class="container">
+                <a href="https://tiki.vn/?src=header_tiki" class="logo">
+                    <img class="logo-vtcA" src="image/icon-header/VTCA_White_Logo.png" alt="">
+                </a>
+
+                <div class="form-search">
+                    <form id="search_form" action="https://tiki.vn/search" method="get">
+                        <div class="search-wrap">
+                            <div class="input">
+                                <div class="flex">
+                                    <input type="text" name="q" autocomplete="off" value=""
+                                        placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ...">
+                                </div>
+                            </div>
+                            <button type="submit">
+                                <i class="tikicon icon-search"></i>
+                                <span>Tìm kiếm</span>
+                            </button>
+                        </div>
+                    </form>
+                    <div id="search-seller">
+                        <div data-reactroot="" class="seller-search hidden"></div>
+                    </div>
+                </div>
+
+                <div class="header-link">
+                    <a rel="nofollow" href="https://tiki.vn/sales/order/history?src=header_orders"
+                        title="Kiểm tra trạng thái Đơn hàng của bạn" class="tracking-order item">
+                        <img class="icon-style-1 icontracking" src="image/icon-header/theoDoiDonHang-icon.png" alt="">
+                        Theo dõi<br>đơn hàng
+                    </a>
+
+                    <div class="noti-item tracking-noti item" id="header-noti">
+                        <div data-reactroot="">
+                            <div><span class="number-notification user"></span>
+                                <img class="icon-style-1 icon-notification"
+                                    src="image/icon-header/thongBaoCuaToi-icon.png" alt="">
+                                Thông báo<br>của tôi
+                            </div>
+                            <div class="box-noti"></div>
+                        </div>
+                    </div>
+
+                    <div class="user-profile item" id="header-user">
+                        <div data-reactroot="">
+                            <div>
+                                <img class="icon-style-1 icon-user" src="image/icon-header/dangNhapTaiKhoan-icon.png"
+                                    alt="">
+                                <b>Đăng nhập</b><br>
+                                <small>Tài khoản</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="header-cart">
+                        <a data-reactroot="" rel="nofollow" href="/checkout/cart?src=header-cart"
+                            class="header-cart item" admicro-data-event="100115" admicro-data-auto="1"
+                            admicro-data-order="false">
+                            <img class="icon-cart" src="image/icon-header/gioHang-icon.png" alt="">
+                            Giỏ hàng
+                            <span class="cart-count"></span>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+        <!-- end header-form -->
+
+        <!-- main-nav -->
+        <div class="main-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="main-nav-wrap">
+                        <a href="javascript:" class="main-nav-toggle">
+                            <img src="image/icon-header/danhMucSanPham-icon.png" alt="">
+                            <span class="long">DANH MỤC SẢN PHẨM</span>
+                        </a>
+                    </div>
+
+                    <div class="feature location-picker" id="locationPicker">
+                        <img class="icon-location-picker" src="image/icon-header/banMuonGiaoHangToiDau-icon.png" alt="">
+                        <span class="text">Bạn muốn giao hàng tới đâu?
+                        </span>
+                    </div>
+
+                    <a class="feature recently" href="javascript:">
+                        <img src="image/icon-header-promo/banHangCungTiKi1-icon.png" alt="">
+                        Sản phẩm bạn đã xem
+                    </a>
+
+                    <a href="https://tiki.vn/tikinow?src=header_tikinow_fast" target="_blank"
+                        class="feature delivery-2h">
+                        <img class="icon-tikinow" src="image/icon-header/tiki-now.png" alt="">
+                        <span class="text-tiki-now">TikiNOW giao nhanh<br>
+                            Hàng trăm nghìn sản phẩm
+                        </span>
+                    </a>
+
+                    <div class="feature exclusive">
+                        <img class="icon-exclusive" src="image/icon-header/sanPhamChinhHieu-icon.png" alt="">
+                        <span class="text-exclusive">Tất cả sản phẩm<br>
+                            100% chính hiệu
+                        </span>
+                    </div>
+
+                    <a href="https://tiki.vn/doi-tra-de-dang?src=header_return_policy" target="_blank"
+                        class="feature return">
+                        <img src="image/icon-header/doiTraHang-icon.png" alt="">
+                        30 ngày đổi trả dễ dàng
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- end main-nav -->
+    </div>
+    <!-- end header -->
+
+    <!-- breadcrumb -->
+    <div class="breadcrumb-wrap">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="/">
+                        Trang chủ
+                    </a></li>
+                <li class="active" style="width: 1165px;">
+                    <span>
+                        Tiki Deal
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- end breadcrumb -->
+
+    <!-- main body -->
+    <div class="main-body">
+        <!-- tiki Deal Header -->
+        <div class="container">
+            <div class="tiki-deal-header">
+                <img class="icon-hot-deal" src="image/icon-body/sprite.png" alt="">
+                <div class="title">Tiki Deal</div>
+                <div class="text">
+                    Cập nhật hàng giờ tất cả những deal giảm giá đặc biệt trên Tiki. Hãy bookmark trang này và quay lại
+                    thường xuyên để không bỏ lỡ bạn nhé!
+                    <div class="fb-btn">
+                        <img src="image/icon-body/download.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end tiki Deal Header -->
+
+        <!-- main -->
+        <div class="container">
+            <div class="flex-container">
+                <!-- side-bar -->
+                <div class="side-bar">
+                    <div class="head">
+                        NGÀNH HÀNG QUAN TÂM
+                    </div>
+                    <ul class="filter-category">
+                        <li><label class="checkbox"><input type="checkbox">Điện Thoại, Máy Tính Bảng
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Điện Tử - Điện Lạnh
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Thiết Bị Số - Phụ Kiện Số
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Laptop &amp; Máy Vi Tính
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Máy Ảnh Máy Quay Phim
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Điện Gia Dụng
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Nhà Cửa Đời Sống
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Bách Hóa Online
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Đồ chơi, Mẹ &amp; Bé
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Làm Đẹp - Sức Khỏe
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Thời Trang
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Thể Thao &amp; Dã Ngoại
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Xe Máy, Ô tô, Xe Đạp
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Nhà Sách Tiki
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Voucher - Dịch Vụ
+                            </label></li>
+                    </ul>
+                </div>
+                <!-- end side-bar -->
+
+                <!-- product-list -->
+                <div class="product-listing">
+                    <div class="tabs">
+                        <div class="tab-item active">ĐANG BÁN</div>
+                        <div class="tab-item">SẮP BÁN</div>
+                        <div class="tab-item">ĐANG THEO DÕI</div>
+                        <div class="tab-item">CHÁY HÀNG</div>
+                    </div>
+                    <div class="items"><a class="deal-item"
+                            href="https://tiki.vn/ta-dan-huggies-dry-goi-cuc-dai-l68-68-mieng-bao-bi-moi-p848992.html?spid=855496&amp;src=deal-hot&amp;2hi=0"
+                            target="_blank" data-id="848992"
+                            data-title="Tã Dán Huggies Dry Gói Cực Đại L68 (68 Miếng) - Bao Bì Mới" data-brand=""
+                            data-price="237000" data-impresslistname="Deal Hot" data-impressposition="1">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2192 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2193 -->26
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2194 -->%
+                                    <!-- /react-text -->
+                                </div><img class="lazy" style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/f5/32/3f/70fe686b158b83af76bc466e44815064.jpg">
+                            </div>
+                            <div class="title">
+                                <!-- react-text: 2197 -->Tã Dán Huggies Dry Gói Cực Đại L68 (68 Miếng) - Bao Bì Mới
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 86%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2213 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2214 -->53
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2215 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2217 -->237.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2218 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2220 -->320.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2221 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 52.2%;"></div><span class="text">Đã bán 15675</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3144 -->21
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3145 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3146 -->19
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3147 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3148 -->44
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3149 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3150 -->01
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/ta-dan-huggies-dry-goi-cuc-dai-m76-76-mieng-bao-bi-moi-p916267.html?spid=1098846&amp;src=deal-hot&amp;2hi=1"
+                            target="_blank" data-id="916267"
+                            data-title="Tã Dán Huggies Dry Gói Cực Đại M76 (76 Miếng) - Bao Bì Mới " data-brand=""
+                            data-price="237000" data-impresslistname="Deal Hot" data-impressposition="2">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2238 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2239 -->26
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2240 -->%
+                                    <!-- /react-text -->
+                                </div><i class="tikicon icon-tikinow-20"></i><img class="lazy"
+                                    style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/9a/19/c6/ec552c35c6670014351edd84c7c96ffd.jpg">
+                            </div>
+                            <div class="title"><i class="tikicon icon-tikinow"></i><!-- react-text: 2245 -->Tã Dán
+                                Huggies Dry Gói Cực Đại M76 (76 Miếng) - Bao Bì Mới
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 78%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2261 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2262 -->97
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2263 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2265 -->237.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2266 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2268 -->320.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2269 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 76.3%;"></div><span class="text">Đã bán 15256</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3158 -->21
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3159 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3160 -->19
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3161 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3162 -->44
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3163 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3164 -->01
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/ta-dan-so-sinh-huggies-dry-newborn-s56-56-mieng-p3770261.html?spid=3774161&amp;src=deal-hot&amp;2hi=0"
+                            target="_blank" data-id="3770261"
+                            data-title="Tã Dán Sơ Sinh Huggies Dry Newborn S56 (56 Miếng)" data-brand=""
+                            data-price="163000" data-impresslistname="Deal Hot" data-impressposition="3">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2286 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2287 -->22
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2288 -->%
+                                    <!-- /react-text -->
+                                </div><img class="lazy" style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/fe/fa/01/20f5d88c5bbbcc418ab9a2a731a61e74.jpg">
+                            </div>
+                            <div class="title">
+                                <!-- react-text: 2291 -->Tã Dán Sơ Sinh Huggies Dry Newborn S56 (56 Miếng)
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 72%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2307 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2308 -->82
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2309 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2311 -->163.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2312 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2314 -->210.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2315 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 83.2%;"></div><span class="text">Sắp bán hết</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3172 -->21
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3173 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3174 -->19
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3175 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3176 -->44
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3177 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3178 -->01
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/ta-dan-huggies-dry-goi-dai-l42-42-mieng-bao-bi-moi-p3770265.html?spid=3774165&amp;src=deal-hot&amp;2hi=0"
+                            target="_blank" data-id="3770265"
+                            data-title="Tã Dán Huggies Dry Gói Đại L42 (42 Miếng) - Bao Bì Mới" data-brand=""
+                            data-price="161000" data-impresslistname="Deal Hot" data-impressposition="4">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2332 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2333 -->23
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2334 -->%
+                                    <!-- /react-text -->
+                                </div><img class="lazy" style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/19/39/3d/b056954e9eb91a7ecc579e80ee523214.jpg">
+                            </div>
+                            <div class="title">
+                                <!-- react-text: 2337 -->Tã Dán Huggies Dry Gói Đại L42 (42 Miếng) - Bao Bì Mới
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 82%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2353 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2354 -->9
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2355 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2357 -->161.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2358 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2360 -->210.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2361 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 65.2%;"></div><span class="text">Đã bán 6520</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3186 -->21
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3187 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3188 -->19
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3189 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3190 -->44
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3191 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3192 -->01
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/may-vat-cam-philips-hr-2738-hang-chinh-hang-p394854.html?spid=96204&amp;src=deal-hot&amp;2hi=1"
+                            target="_blank" data-id="394854" data-title="Máy Vắt Cam Philips HR-2738 - Hàng chính hãng"
+                            data-brand="" data-price="453000" data-impresslistname="Deal Hot" data-impressposition="5">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2378 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2379 -->40
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2380 -->%
+                                    <!-- /react-text -->
+                                </div><i class="tikicon icon-tikinow-20"></i><img class="lazy"
+                                    style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/30/ec/d4/a007c99c465cb3f01aece695a151e403.jpg">
+                            </div>
+                            <div class="title"><i class="tikicon icon-tikinow"></i><!-- react-text: 2385 -->Máy Vắt Cam
+                                Philips HR-2738 - Hàng chính hãng
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 94%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2401 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2402 -->212
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2403 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2405 -->453.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2406 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2408 -->750.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2409 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 81.8%;"></div><span class="text">Sắp bán hết</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3200 -->20
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3201 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3202 -->19
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3203 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3204 -->44
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3205 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3206 -->02
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/bo-kich-song-wifi-repeater-300mbps-totolink-ex200-hang-chinh-hang-p547563.html?spid=271577&amp;src=deal-hot&amp;2hi=1"
+                            target="_blank" data-id="547563"
+                            data-title="Bộ Kích Sóng Wifi Repeater 300Mbps Totolink EX200 - Hàng Chính Hãng"
+                            data-brand="" data-price="199000" data-impresslistname="Deal Hot" data-impressposition="6">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2426 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2427 -->27
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2428 -->%
+                                    <!-- /react-text -->
+                                </div><i class="tikicon icon-tikinow-20"></i><img class="lazy"
+                                    style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/media/catalog/product/e/x/ex200-2.u425.d20170309.t162916.222253.jpg">
+                            </div>
+                            <div class="title"><i class="tikicon icon-tikinow"></i><!-- react-text: 2433 -->Bộ Kích Sóng
+                                Wifi Repeater 300Mbps Totolink EX200 - Hàng Chính Hãng
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 82%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2449 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2450 -->572
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2451 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2453 -->199.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2454 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2456 -->273.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2457 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 77.7%;"></div><span class="text">Đã bán 5437</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3214 -->0
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3215 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3216 -->12
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3217 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3218 -->44
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3219 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3220 -->02
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/ta-dan-huggies-dry-goi-dai-m48-48-mieng-bao-bi-moi-p3770263.html?spid=3774163&amp;src=deal-hot&amp;2hi=0"
+                            target="_blank" data-id="3770263"
+                            data-title="Tã Dán Huggies Dry Gói Đại M48 (48 Miếng) - Bao Bì Mới" data-brand=""
+                            data-price="161000" data-impresslistname="Deal Hot" data-impressposition="7">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2474 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2475 -->23
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2476 -->%
+                                    <!-- /react-text -->
+                                </div><img class="lazy" style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/82/de/d2/69c3fb6162ee2a686422bb63eeaa75a7.jpg">
+                            </div>
+                            <div class="title">
+                                <!-- react-text: 2479 -->Tã Dán Huggies Dry Gói Đại M48 (48 Miếng) - Bao Bì Mới
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 76%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2495 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2496 -->15
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2497 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2499 -->161.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2500 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2502 -->210.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2503 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 51.1%;"></div><span class="text">Đã bán 5108</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3228 -->21
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3229 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3230 -->19
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3231 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3232 -->44
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3233 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3234 -->01
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/pin-sac-du-phong-xiaomi-gen-2s-version-2018-10000-mah-2-cong-usb-ho-tro-qc-3-0-hang-chinh-hang-p1686107.html?spid=1689893&amp;src=deal-hot&amp;2hi=1"
+                            target="_blank" data-id="1686107"
+                            data-title="Pin Sạc Dự Phòng Xiaomi Gen 2S Version 2018 10000 mAh 2 Cổng USB Hỗ Trợ QC 3.0 - Hàng Chính Hãng"
+                            data-brand="" data-price="269000" data-impresslistname="Deal Hot" data-impressposition="8">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2520 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2521 -->31
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2522 -->%
+                                    <!-- /react-text -->
+                                </div><i class="tikicon icon-tikinow-20"></i><img class="lazy"
+                                    style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/ea/07/75/459f8b9acaff19fac7df9c9e8a1186e1.jpg">
+                            </div>
+                            <div class="title"><i class="tikicon icon-tikinow"></i><!-- react-text: 2527 -->Pin Sạc Dự
+                                Phòng Xiaomi Gen 2S Version 2018 10000 mAh 2 Cổng USB Hỗ Trợ QC 3.0 - Hàng Chính Hãng
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 86%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2543 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2544 -->699
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2545 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2547 -->269.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2548 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2550 -->390.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2551 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 80.6%;"></div><span class="text">Sắp bán hết</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3242 -->3
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3243 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3244 -->19
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3245 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3246 -->44
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3247 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3248 -->02
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/bo-cham-soc-da-mun-nhay-cam-la-roche-posay-effaclar-kit-100865164-p643675.html?spid=1710749&amp;src=deal-hot&amp;2hi=1"
+                            target="_blank" data-id="643675"
+                            data-title="Bộ Chăm Sóc Da Mụn Nhạy Cảm La Roche Posay Effaclar Kit 100865164" data-brand=""
+                            data-price="169000" data-impresslistname="Deal Hot" data-impressposition="9">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2568 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2569 -->32
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2570 -->%
+                                    <!-- /react-text -->
+                                </div><i class="tikicon icon-tikinow-20"></i><img class="lazy"
+                                    style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/82/8e/13/fa82638aa7360123e754ed8403114b73.jpg">
+                            </div>
+                            <div class="title"><i class="tikicon icon-tikinow"></i><!-- react-text: 2575 -->Bộ Chăm Sóc
+                                Da Mụn Nhạy Cảm La Roche Posay Effaclar Kit 100865164
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 84%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2591 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2592 -->267
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2593 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2595 -->169.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2596 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2598 -->249.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2599 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 72.1%;"></div><span class="text">Đã bán 3605</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3256 -->0
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3257 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3258 -->19
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3259 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3260 -->44
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3261 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3262 -->01
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/am-dien-thuy-tinh-sieu-toc-co-dieu-chinh-nhiet-do-lock-lock-ejk341-1-8l-hang-chinh-hang-p4701559.html?spid=4701561&amp;src=deal-hot&amp;2hi=1"
+                            target="_blank" data-id="4701559"
+                            data-title="Ấm Điện Thủy Tinh Siêu Tốc Có Điều Chỉnh Nhiệt Độ Lock&amp;Lock EJK341 (1.8L) - Hàng chính hãng"
+                            data-brand="" data-price="469000" data-impresslistname="Deal Hot" data-impressposition="10">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2616 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2617 -->53
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2618 -->%
+                                    <!-- /react-text -->
+                                </div><i class="tikicon icon-tikinow-20"></i><img class="lazy"
+                                    style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/6f/df/e9/d190dac98a417f6ec0cf55854f7d404d.jpg">
+                            </div>
+                            <div class="title"><i class="tikicon icon-tikinow"></i><!-- react-text: 2623 -->Ấm Điện Thủy
+                                Tinh Siêu Tốc Có Điều Chỉnh Nhiệt Độ Lock&amp;Lock EJK341 (1.8L) - Hàng chính hãng
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 92%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2639 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2640 -->130
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2641 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2643 -->469.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2644 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2646 -->990.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2647 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 57.5%;"></div><span class="text">Đã bán 3451</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3270 -->4
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3271 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3272 -->01
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3273 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3274 -->44
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3275 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3276 -->03
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/ipad-wifi-32gb-new-2018-hang-chinh-hang-p1929161.html?spid=1929169&amp;src=deal-hot&amp;2hi=1"
+                            target="_blank" data-id="1929161" data-title="iPad WiFi 32GB New 2018 - Hàng Chính Hãng"
+                            data-brand="" data-price="6969000" data-impresslistname="Deal Hot"
+                            data-impressposition="11">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2664 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2665 -->22
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2666 -->%
+                                    <!-- /react-text -->
+                                </div><i class="tikicon icon-tikinow-20"></i><img class="lazy"
+                                    style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/8e/69/ac/b9c70cfb544a36eb294877462436d8fe.jpg">
+                            </div>
+                            <div class="title"><i class="tikicon icon-tikinow"></i><!-- react-text: 2671 -->iPad WiFi
+                                32GB New 2018 - Hàng Chính Hãng
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 92%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2687 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2688 -->1093
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2689 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2691 -->6.969.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2692 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2694 -->8.990.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2695 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 64.5%;"></div><span class="text">Đã bán 3224</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3284 -->21
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3285 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3286 -->19
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3287 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3288 -->43
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3289 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3290 -->02
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/ta-quan-huggies-dry-xxl28-28-mieng-bao-bi-moi-p849010.html?spid=855520&amp;src=deal-hot&amp;2hi=1"
+                            target="_blank" data-id="849010"
+                            data-title="Tã Quần Huggies Dry XXL28 (28 Miếng) - Bao Bì Mới" data-brand=""
+                            data-price="168000" data-impresslistname="Deal Hot" data-impressposition="12">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2712 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2713 -->24
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2714 -->%
+                                    <!-- /react-text -->
+                                </div><i class="tikicon icon-tikinow-20"></i><img class="lazy"
+                                    style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/d8/80/a9/d32216181770a560dbf4584fc02fed1a.jpg">
+                            </div>
+                            <div class="title"><i class="tikicon icon-tikinow"></i><!-- react-text: 2719 -->Tã Quần
+                                Huggies Dry XXL28 (28 Miếng) - Bao Bì Mới
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 100%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2735 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2736 -->9
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2737 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2739 -->168.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2740 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2742 -->221.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2743 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar">
+                                    <div style="width: 32.1%;"></div><span class="text">Đã bán 3213</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3297 -->21
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3298 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3299 -->19
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3300 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3301 -->44
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3302 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3303 -->01
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/bo-10-goi-mat-na-giay-banobagi-vita-genic-jelly-mask-lifting-whitening-relaxing-hydrating-p2379759.html?spid=11082316&amp;src=deal-hot&amp;2hi=0"
+                            target="_blank" data-id="2379759"
+                            data-title="Bộ 10 gói Mặt nạ giấy Banobagi Vita Genic Jelly Mask (Lifting, Whitening, Relaxing, Hydrating)"
+                            data-brand="" data-price="160000" data-impresslistname="Deal Hot" data-impressposition="13">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2760 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2761 -->47
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2762 -->%
+                                    <!-- /react-text -->
+                                </div><img class="lazy" style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/96/50/20/1c56d6d31699af0e2a1af27a64fd9a78.jpg">
+                            </div>
+                            <div class="title">
+                                <!-- react-text: 2765 -->Bộ 10 gói Mặt nạ giấy Banobagi Vita Genic Jelly Mask (Lifting,
+                                Whitening, Relaxing, Hydrating)
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 94%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2781 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2782 -->87
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2783 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2785 -->160.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2786 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2788 -->300.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2789 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 77%;"></div><span class="text">Đã bán 3081</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3311 -->21
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3312 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3313 -->19
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3314 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3315 -->43
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3316 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3317 -->02
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/combo-5-khan-tam-tre-thanh-nam-combo5kttn-50-x-100-cm-p772740.html?spid=12693704&amp;src=deal-hot&amp;2hi=0"
+                            target="_blank" data-id="772740"
+                            data-title="Combo 5 Khăn Tắm Tre Thành Nam COMBO5KTTN (50 x 100 cm) - Màu Ngẫu Nhiên"
+                            data-brand="" data-price="199000" data-impresslistname="Deal Hot" data-impressposition="14">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2806 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2807 -->60
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2808 -->%
+                                    <!-- /react-text -->
+                                </div><img class="lazy" style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/media/catalog/product/c/o/combo5kttn1m.u5530.d20170807.t111154.944011.jpg">
+                            </div>
+                            <div class="title">
+                                <!-- react-text: 2811 -->Combo 5 Khăn Tắm Tre Thành Nam COMBO5KTTN (50 x 100 cm) - Màu
+                                Ngẫu Nhiên
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 88%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2827 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2828 -->104
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2829 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2831 -->199.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2832 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2834 -->500.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2835 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 95.8%;"></div><span class="text">Sắp bán hết</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3325 -->4
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3326 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3327 -->09
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3328 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3329 -->44
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3330 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3331 -->02
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/combo-3-goi-ta-quan-bobby-goi-sieu-lon-xl48-48-mieng-p500468.html?spid=215721&amp;src=deal-hot&amp;2hi=1"
+                            target="_blank" data-id="500468"
+                            data-title="Combo 3 Gói Tã Quần Bobby Gói Siêu Lớn XL48 (48 Miếng)" data-brand=""
+                            data-price="739000" data-impresslistname="Deal Hot" data-impressposition="15">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2852 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2853 -->24
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2854 -->%
+                                    <!-- /react-text -->
+                                </div><i class="tikicon icon-tikinow-20"></i><img class="lazy"
+                                    style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/6f/d3/5a/d9db496947d61cd9ee227ba81cc9e44f.jpg">
+                            </div>
+                            <div class="title"><i class="tikicon icon-tikinow"></i><!-- react-text: 2859 -->Combo 3 Gói
+                                Tã Quần Bobby Gói Siêu Lớn XL48 (48 Miếng)
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 90%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2875 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2876 -->119
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2877 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2879 -->739.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2880 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2882 -->969.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2883 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar">
+                                    <div style="width: 47.7%;"></div><span class="text">Đã bán 2860</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3338 -->21
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3339 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3340 -->11
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3341 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3342 -->54
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3343 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3344 -->02
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/dien-thoai-samsung-galaxy-a10-32gb-2gb-hang-chinh-hang-p12738344.html?spid=12738348&amp;src=deal-hot&amp;2hi=1"
+                            target="_blank" data-id="12738344"
+                            data-title="Điện Thoại Samsung Galaxy A10 (32GB/2GB) - Hàng Chính Hãng" data-brand=""
+                            data-price="2669000" data-impresslistname="Deal Hot" data-impressposition="16">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2900 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2901 -->14
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2902 -->%
+                                    <!-- /react-text -->
+                                </div><i class="tikicon icon-tikinow-20"></i><img class="lazy"
+                                    style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/c5/39/6c/89ffe5b999304756f5eff65297ba700d.jpg">
+                            </div>
+                            <div class="title"><i class="tikicon icon-tikinow"></i><!-- react-text: 2907 -->Điện Thoại
+                                Samsung Galaxy A10 (32GB/2GB) - Hàng Chính Hãng
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 96%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2923 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2924 -->76
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2925 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2927 -->2.669.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2928 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2930 -->3.090.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2931 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 88.8%;"></div><span class="text">Sắp bán hết</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3352 -->0
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3353 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3354 -->19
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3355 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3356 -->43
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3357 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3358 -->02
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/combo-4-ta-dan-unidry-super-goi-dai-m42-42-mieng-p533011.html?spid=253989&amp;src=deal-hot&amp;2hi=1"
+                            target="_blank" data-id="533011"
+                            data-title="Combo 4 Tã Dán UniDry Super Gói Đại M42 (42 Miếng)" data-brand=""
+                            data-price="410000" data-impresslistname="Deal Hot" data-impressposition="17">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2948 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2949 -->38
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2950 -->%
+                                    <!-- /react-text -->
+                                </div><i class="tikicon icon-tikinow-20"></i><img class="lazy"
+                                    style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/e9/91/44/436667a4108bbf15033969b312005b9b.jpg">
+                            </div>
+                            <div class="title"><i class="tikicon icon-tikinow"></i><!-- react-text: 2955 -->Combo 4 Tã
+                                Dán UniDry Super Gói Đại M42 (42 Miếng)
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 94%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 2971 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2972 -->71
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2973 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 2975 -->410.000
+                                <!-- /react-text -->
+                                <!-- react-text: 2976 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 2978 -->660.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2979 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar">
+                                    <div style="width: 26.3%;"></div><span class="text">Đã bán 2634</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3365 -->21
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3366 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3367 -->19
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3368 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3369 -->44
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3370 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3371 -->01
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/tp-link-tl-wr841n-router-wifi-chuan-n-toc-do-300mbps-hang-chinh-hang-p416613.html?spid=119779&amp;src=deal-hot&amp;2hi=1"
+                            target="_blank" data-id="416613"
+                            data-title="TP-Link  TL-WR841N - Router Wifi Chuẩn N Tốc Độ 300Mbps - Hàng Chính Hãng"
+                            data-brand="" data-price="268000" data-impresslistname="Deal Hot" data-impressposition="18">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 2996 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2997 -->25
+                                    <!-- /react-text -->
+                                    <!-- react-text: 2998 -->%
+                                    <!-- /react-text -->
+                                </div><i class="tikicon icon-tikinow-20"></i><img class="lazy"
+                                    style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/cd/2f/0a/4c53cdba0b1ca8cbca34863e6d077b9f.jpg">
+                            </div>
+                            <div class="title"><i class="tikicon icon-tikinow"></i><!-- react-text: 3003 -->TP-Link
+                                TL-WR841N - Router Wifi Chuẩn N Tốc Độ 300Mbps - Hàng Chính Hãng
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 88%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 3019 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 3020 -->230
+                                    <!-- /react-text -->
+                                    <!-- react-text: 3021 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 3023 -->268.000
+                                <!-- /react-text -->
+                                <!-- react-text: 3024 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 3026 -->359.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 3027 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 63.7%;"></div><span class="text">Đã bán 2548</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3379 -->0
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3380 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3381 -->12
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3382 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3383 -->44
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3384 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3385 -->02
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/binh-giu-nhiet-lock-lock-feather-light-lhc4131bkr-450ml-p2153235.html?spid=794763&amp;src=deal-hot&amp;2hi=1"
+                            target="_blank" data-id="2153235"
+                            data-title="Bình Giữ Nhiệt Lock&amp;Lock Feather Light LHC4131BKR (450ml)" data-brand=""
+                            data-price="219000" data-impresslistname="Deal Hot" data-impressposition="19">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 3044 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 3045 -->51
+                                    <!-- /react-text -->
+                                    <!-- react-text: 3046 -->%
+                                    <!-- /react-text -->
+                                </div><i class="tikicon icon-tikinow-20"></i><img class="lazy"
+                                    style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/ef/04/2a/7a6cfa252f06948509edd52c340f62a4.jpg">
+                            </div>
+                            <div class="title"><i class="tikicon icon-tikinow"></i><!-- react-text: 3051 -->Bình Giữ
+                                Nhiệt Lock&amp;Lock Feather Light LHC4131BKR (450ml)
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 92%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 3067 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 3068 -->370
+                                    <!-- /react-text -->
+                                    <!-- react-text: 3069 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 3071 -->219.000
+                                <!-- /react-text -->
+                                <!-- react-text: 3072 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 3074 -->449.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 3075 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 50.7%;"></div><span class="text">Đã bán 2534</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3393 -->4
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3394 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3395 -->03
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3396 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3397 -->14
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3398 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3399 -->02
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a><a class="deal-item"
+                            href="https://tiki.vn/bo-cay-lau-nha-xoay-tay-mini-ettom-lock-lock-etm498-2-bong-lau-tang-them-2-bong-lau-p914402.html?spid=914722&amp;src=deal-hot&amp;2hi=1"
+                            target="_blank" data-id="914402"
+                            data-title="Bộ Cây Lau Nhà Xoay Tay Mini Ettom Lock&amp;Lock ETM498 (2 Bông Lau) - Tặng Thêm 2 Bông Lau"
+                            data-brand="" data-price="399000" data-impresslistname="Deal Hot" data-impressposition="20">
+                            <div class="image">
+                                <div class="discount-badge">
+                                    <!-- react-text: 3092 -->-
+                                    <!-- /react-text -->
+                                    <!-- react-text: 3093 -->53
+                                    <!-- /react-text -->
+                                    <!-- react-text: 3094 -->%
+                                    <!-- /react-text -->
+                                </div><i class="tikicon icon-tikinow-20"></i><img class="lazy"
+                                    style="width: 200px; display: inline;"
+                                    src="https://salt.tikicdn.com/cache/280x280/ts/product/02/a4/8c/873963fbfccdefba5a7aa42ca29c46f9.jpg">
+                            </div>
+                            <div class="title"><i class="tikicon icon-tikinow"></i><!-- react-text: 3099 -->Bộ Cây Lau
+                                Nhà Xoay Tay Mini Ettom Lock&amp;Lock ETM498 (2 Bông Lau) - Tặng Thêm 2 Bông Lau
+                                <!-- /react-text -->
+                            </div>
+                            <div class="review-wrap">
+                                <p class="rating"><span class="rating-content"><i class="star"></i><i
+                                            class="star"></i><i class="star"></i><i class="star"></i><i
+                                            class="star"></i><span style="width: 90%;"><i class="star"></i><i
+                                                class="star"></i><i class="star"></i><i class="star"></i><i
+                                                class="star"></i></span></span></p>
+                                <p class="review">
+                                    <!-- react-text: 3115 -->(
+                                    <!-- /react-text -->
+                                    <!-- react-text: 3116 -->322
+                                    <!-- /react-text -->
+                                    <!-- react-text: 3117 --> nhận xét)
+                                    <!-- /react-text -->
+                                </p>
+                            </div>
+                            <div class="price-sale">
+                                <!-- react-text: 3119 -->399.000
+                                <!-- /react-text -->
+                                <!-- react-text: 3120 --> ₫
+                                <!-- /react-text --><span class="price-regular">
+                                    <!-- react-text: 3122 -->848.000
+                                    <!-- /react-text -->
+                                    <!-- react-text: 3123 --> ₫
+                                    <!-- /react-text --></span></div>
+                            <div class="deal-status">
+                                <div class="process-bar"><span class="tikicon icon-hot_12"></span>
+                                    <div style="width: 50.2%;"></div><span class="text">Đã bán 2512</span>
+                                </div>
+                                <div class="started">
+                                    <div class="deal-count-down"><span class="time">
+                                            <!-- react-text: 3407 -->4
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3408 --> ngày
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3409 -->03
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3410 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3411 -->14
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3412 -->:
+                                            <!-- /react-text -->
+                                            <!-- react-text: 3413 -->02
+                                            <!-- /react-text --></span></div>
+                                </div>
+                            </div><button class="btn add-deal">Mua ngay</button>
+                        </a></div>
+                </div>
+                <!-- end product-list -->
+            </div>
+            <!-- list page -->
+            <div class="list-pager">
+                <ul class="pagination">
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">></a></li>
+                </ul>
+            </div>
+            <!-- end list page -->
+        </div>
+        <!-- end main -->
+    </div>
+    <!-- end main body -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <!-- Begin MailChimp Signup Form -->
+        <div class="tiki-newsletter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 clearfix">
+                        <div class="tiki-newsletter-title clearfix">
+                            <img class="icon-newsletter" src="image/icon-footer/sprite2.png" alt="">
+                            <h3>Đăng ký nhận bản tin Tiki</h3>
+                            <h5>Đừng bỏ lỡ hàng ngàn sản phẩm và chương trình siêu hấp dẫn</h5>
+                        </div>
+                        <div class="mc-field-group">
+                            <input type="email" placeholder="Địa chỉ email của bạn" class="tiki-home-email form-control"
+                                id="mce-EMAIL">
+                            <span class="tiki-newsletter-helper"></span>
+                        </div>
+                        <button class="button btn btn-home-newsletter" data-index="0">Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End mc_embed_signup-->
+        <hr class="line-bg-body">
+        <div class="list-footer-nav">
+            <div class="container">
+                <div class="footer-nav" style="margin-right: 15px;width: 262px;">
+                    <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+                    <p class="hotline-number">
+                        Hotline đặt hàng: <a href="tel:18006963">1800-6963</a><br>
+                        <small>(Miễn phí , 8-21h kể cả T7, CN)</small>
+                    </p>
+                    <p class="hotline-number">
+                        Hotline chăm sóc khách hàng: <a href="tel:19006035">1900-6035</a><br>
+                        <small>(1000đ/phút , 8-21h kể cả T7, CN)</small>
+                    </p>
+                    <div class="nav-list">
+                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi" target="_blank">Các câu hỏi thường gặp</a>
+                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi/requests/new" target="_blank">Gửi yêu cầu hỗ
+                            trợ</a>
+                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi/categories/200126644" target="_blank">Hướng
+                            dẫn đặt hàng</a>
+                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi/categories/200123960" target="_blank">Phương
+                            thức vận chuyển</a>
+                        <a rel="nofollow" href="https://tiki.vn/doi-tra-de-dang" target="_blank">Chính sách đổi trả</a>
+                        <a rel="nofollow" href="https://tiki.vn/lp/tra-gop" target="_blank">Hướng dẫn mua trả góp</a>
+                        <a rel="nofollow" href="https://hotro.tiki.vn/hc/vi/articles/360000822643" target="_blank">Chính
+                            sách hàng nhập khẩu</a>
+
+                        <p class="hotline-number-normal">
+                            Hỗ trợ khách hàng: <a href="mailto:support@tiki.vn">support@tiki.vn</a>
+                        </p>
+
+                        <p class="hotline-number-normal">
+                            Báo lỗi bảo mật: <a href="mailto:security@tiki.vn">security@tiki.vn</a>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h4>VỀ TIKI</h4>
+                    <div class="nav-list">
+                        <a rel="nofollow" href="https://tiki.vn/gioi-thieu-ve-tiki" target="_blank">Giới thiệu Tiki</a>
+                        <a rel="nofollow" href="http://tuyendung.tiki.vn" target="_blank">Tuyển Dụng</a>
+                        <a rel="nofollow" href="https://tiki.vn/bao-mat-thanh-toan" target="_blank">Chính sách bảo mật
+                            thanh toán</a>
+                        <a rel="nofollow" href="https://tiki.vn/bao-mat-thong-tin-ca-nhan" target="_blank">Chính sách
+                            bảo mật thông tin cá nhân</a>
+                        <a rel="nofollow" href="https://hotro.tiki.vn/hc/vi/articles/115005575826" target="_blank">Chính
+                            sách giải quyết khiếu nại</a>
+                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi/articles/201971214" target="_blank">Điều
+                            khoản sử dụng</a>
+                        <a rel="nofollow" href="https://tiki.vn/hoi-sach-online" target="_blank">Hội Sách Online</a>
+                        <a rel="nofollow"
+                            href="http://hotro.tiki.vn/hc/vi/articles/204153170-Các-bước-sử-dụng-Tiki-xu-và-Mã-giảm-giá"
+                            target="_blank">Giới thiệu Tiki Xu</a>
+                        <a rel="nofollow" href="http://tiki.vn/tu-van" target="_blank">Tiki Tư Vấn</a>
+                        <a rel="nofollow" href="https://tiki.vn/chuong-trinh/ban-hang-doanh-nghiep" target="_blank">Bán
+                            hàng doanh nghiệp</a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h4>HỢP TÁC VÀ LIÊN KIẾT</h4>
+                    <div class="nav-list">
+                        <a rel="nofollow" href="https://tiki.vn/quy-che-hoat-dong-sgdtmdt" target="_blank">Quy chế hoạt
+                            động Sàn GDTMĐT</a>
+                        <!-- <a rel="nofollow" href="http://www.foody.vn" target="_blank">Foody.vn - Ăn gì ở đâu</a>
+                            <a rel="nofollow" href="http://www.ivivu.com" target="_blank">iVIVU.com - Đặt khách sạn giá rẻ</a> -->
+                        <a rel="nofollow" href="https://tiki.vn/ban-hang-cung-tiki" target="_blank">Bán hàng cùng
+                            Tiki</a>
+                    </div>
+                    <!-- <div class="nav-other partner">
+                            <a rel="nofollow" href="http://www.foody.vn" target="_blank">
+                                <img src="https://salt.tikicdn.com/assets/img/icon/logo-foody-vietnam@3x.png" />
+                            </a>
+                            <a rel="nofollow" href="http://www.ivivu.com" target="_blank">
+                                <img src="https://salt.tikicdn.com/assets/img/icon/logo-ivivu@3x.png" />
+                            </a>
+                        </div> -->
+                </div>
+                <div class="footer-nav">
+                    <h4>PHƯƠNG THỨC THANH TOÁN</h4>
+                    <div class="nav-other payment">
+                        <img class="icon-payment" src="image/icon-footer/visa-icon.png" alt="">
+                        <img class="icon-payment" src="image/icon-footer/masterCard-icon.png" alt="">
+                        <img class="icon-payment" src="image/icon-footer/jcb-icon.png" alt="">
+                        <img class="icon-payment" src="image/icon-footer/tienMat-icon.png" alt="">
+                        <img class="icon-payment" src="image/icon-footer/internetBanking-icon.png" alt="">
+                        <img class="icon-payment" src="image/icon-footer/traGop-icon.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+                    <div class="nav-other social-conn">
+                        <a rel="nofollow" href="https://www.facebook.com/tiki.vn/" target="_blank" title="Facebook">
+                            <img class="icon-nav-other" src="image/icon-footer/facebook-icon.png" alt="">
+                        </a>
+                        <a rel="nofollow" href="https://www.youtube.com/user/TikiVBlog" target="_blank" title="Youtube">
+                            <img class="icon-nav-other" src="image/icon-footer/youtube-icon.png" alt="">
+                        </a>
+                        <a rel="nofollow" href="http://zalo.me/589673439383195103" target="_blank" title="Zalo">
+                            <img class="icon-nav-other" src="image/icon-footer/zalo-icon.png" alt="">
+                        </a>
+                    </div>
+                    <h4 class="appstore-title">TẢI ỨNG DỤNG TRÊN ĐIỆN THOẠI</h4>
+                    <div class="nav-other app-store">
+                        <a rel="nofollow" href="https://itunes.apple.com/vn/app/id958100553" target="_blank"
+                            admicro-data-event="100127" admicro-data-auto="1" admicro-data-order="false">
+                            <img src="image/icon-footer/appleStore-icon.png" alt="">
+                        </a>
+                        <a rel="nofollow" href="https://play.google.com/store/apps/details?id=vn.tiki.app.tikiandroid"
+                            target="_blank" admicro-data-event="100128" admicro-data-auto="1"
+                            admicro-data-order="false">
+                            <img src="image/icon-footer/googleStore-icon.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="line-bg-body">
+
+        <address class="footer-address">
+            <div class="container">
+                <div class="address-office">
+                    <img src="image/icon-footer/diaChiVanPhong-icon.png" alt="" class="icon-location">
+                    <div class="info-address">
+                        <p class="add-real">
+                            <b>Địa chỉ văn phòng:</b>
+                            52 Út Tịch, phường 4, quận Tân Bình, thành phố Hồ Chí Minh
+                        </p>
+                        <p>
+                            Tiki nhận đặt hàng trực tuyến và giao hàng tận nơi, chưa hỗ trợ mua và nhận hàng trực tiếp
+                            tại văn phòng hoặc trung tâm xử lý đơn hàng
+                        </p>
+                    </div>
+                </div>
+                <div class="address-service">
+                    <div class="info-address">
+                        <p class="add-real">
+                            <b>Địa chỉ gửi hàng đổi/trả/bảo hành:</b>
+                            Trung tâm xử lý đơn hàng TIKI - Hẻm số 717, đường Tân Sơn, Phường 12, Quận Gò Vấp, TP. Hồ
+                            Chí Minh
+                        </p>
+                        <p>
+                            (Tham khảo <a rel="nofollow" href="https://tiki.vn/hau-mai" target="_blank">hướng dẫn đổi,
+                                trả, bảo hành</a> hoặc liên hệ <span class="number">1900-6035</span> để được hướng dẫn
+                            thêm)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </address>
+
+        <div class="footer-cpy-right">
+            <div class="container">
+                <div class="cpy-right-info">
+                    <h5>© 2016 - Bản quyền của Công Ty Cổ Phần Ti Ki - Tiki.vn</h5>
+                    <p>Giấy chứng nhận Đăng ký Kinh doanh số 0309532909 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh
+                        cấp ngày 06/01/2010</p>
+                </div>
+                <div class="cpy-right-info-right">
+                    <a href="https://hotro.tiki.vn/hc/vi/articles/115005575826" target="_blank">
+                        <img src="https://salt.tikicdn.com/ts/upload/3d/6c/27/216e535ff06b1b925796957a017cbedb.png"
+                            alt="" height="36px">
+                    </a>
+                    <a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=21201" target="_blank">
+                        <img src="image/icon-footer/boCongThuong-icon.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+</body>
+
+</html>
