@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="AssignmentTikiDeal.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <!-- top promo -->
+        <div class="top-promo">
+            <div class="container">
+                <div class="right">
+                    <a class="top-label" target="_blank"
+                        href="https://chrome.google.com/webstore/detail/tiki-assistant/ncpaceoemnbcjffjpjcgnbaklmkhdmak?hl=en-US&amp;gl=VN&amp;authuser=1"
+                        source="header_partner_offers" title="Trợ Lý TiKi" onclick="">
+                        <img src="image/icon-header-promo/tikiAssistant-icon.png" alt="">
+                        Trợ lý Tiki
+                    </a>
+                    <a class="top-label" target="_blank"
+                        href="https://tiki.vn/top/uu-dai-doi-tac?src=header_partner_offers"
+                        source="header_partner_offers" title="Ưu đãi đối tác" onclick="">
+                        <img src="image/icon-header-promo/uuDaiDoiTac-icon.png" alt="">
+                        Ưu đãi đối tác
+                    </a>
+                    <a class="top-label" target="_blank" href="https://tiki.vn/dat-ve-may-bay?src=header_hotels"
+                        source="header_hotels" title=" Đặt khách sạn" onclick="">
+                        <img src="image/icon-header-promo/datKhachSan-icon.png" alt="">
+                        Đặt khách sạn
+                    </a>
+                    <a class="top-label" target="_blank" href="https://tiki.vn/dat-ve-may-bay?src=header_flights"
+                        source="header_flights" title="Đặt vé máy bay" onclick="">
+                        <img src="image/icon-header-promo/datVeMayBay-icon.png" alt="">
+                        Đặt vé máy bay
+                    </a>
+                    <a class="top-label" target="_blank"
+                        href="https://tiki.vn/chuong-trinh/clearance-sale?src=header_hunting" source="header_hunting"
+                        title="Săn hàng tồn" onclick="">
+                        <img src="image/icon-header-promo/sanHangTon-icon.png" alt="">
+                        Săn hàng tồn
+                    </a>
+                    <a class="top-label" target="_blank" href="https://tiki.vn/deal-hot?src=header_promotion"
+                        source="header_promotion" title="Deal SỐC giảm giá mỗi ngày"
+                        onclick="ga('send','event','tiki-hot','click','header-label')">
+                        <img class="icon-fire" src="image/icon-header-promo/khuyenMaiHot-icon.png" alt="">
+                        Khuyến Mãi HOT
+                    </a>
+                    <a class="top-label" target="_blank" href="https://tiki.vn/hang-ngoai-nhap?src=header_international"
+                        source="header_international" title="Hàng quốc tế" onclick="">
+                        <img src="image/icon-header-promo/hangQuocTe-icon.png" alt="">
+                        Hàng quốc tế
+                    </a>
+                    <a class="top-label" target="_blank"
+                        href="/ban-hang-cung-tiki?ref=header-dropdown&amp;src=header_sell_with_tiki"
+                        title="Kinh doanh cùng Tiki">
+                        <img src="image/icon-header-promo/banHangCungTiki-icon.png" alt="">
+                        Bán hàng cùng Tiki
+                        <img src="image/icon-header-promo/banHangCungTiKi1-icon.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- end top promo -->
+
+        <!-- header-form -->
+        <div class="header-form">
+            <div class="container">
+                <a href="https://tiki.vn/?src=header_tiki" class="logo">
+                    <img class="logo-vtcA" src="image/icon-header/VTCA_White_Logo.png" alt="">
+                </a>
+
+                <div class="form-search">
+                    <form id="search_form" action="https://tiki.vn/search" method="get">
+                        <div class="search-wrap">
+                            <div class="input">
+                                <div class="flex">
+                                    <input type="text" name="q" autocomplete="off" value=""
+                                        placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ...">
+                                </div>
+                            </div>
+                            <button type="submit">
+                                <i class="tikicon icon-search"></i>
+                                <span>Tìm kiếm</span>
+                            </button>
+                        </div>
+                    </form>
+                    <div id="search-seller">
+                        <div data-reactroot="" class="seller-search hidden"></div>
+                    </div>
+                </div>
+
+                <div class="header-link">
+                    <a rel="nofollow" href="https://tiki.vn/sales/order/history?src=header_orders"
+                        title="Kiểm tra trạng thái Đơn hàng của bạn" class="tracking-order item">
+                        <img class="icon-style-1 icontracking" src="image/icon-header/theoDoiDonHang-icon.png" alt="">
+                        Theo dõi<br>đơn hàng
+                    </a>
+
+                    <div class="noti-item tracking-noti item" id="header-noti">
+                        <div data-reactroot="">
+                            <div><span class="number-notification user"></span>
+                                <img class="icon-style-1 icon-notification"
+                                    src="image/icon-header/thongBaoCuaToi-icon.png" alt="">
+                                Thông báo<br>của tôi
+                            </div>
+                            <div class="box-noti"></div>
+                        </div>
+                    </div>
+
+                    <div class="user-profile item" id="header-user">
+                        <div data-reactroot="">
+                            <div>
+                                <img class="icon-style-1 icon-user" src="image/icon-header/dangNhapTaiKhoan-icon.png"
+                                    alt="">
+                                <b>Đăng nhập</b><br>
+                                <small>Tài khoản</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="header-cart">
+                        <a data-reactroot="" rel="nofollow" href="/checkout/cart?src=header-cart"
+                            class="header-cart item" admicro-data-event="100115" admicro-data-auto="1"
+                            admicro-data-order="false">
+                            <img class="icon-cart" src="image/icon-header/gioHang-icon.png" alt="">
+                            Giỏ hàng
+                            <span class="cart-count"></span>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+        <!-- end header-form -->
+
+        <!-- main-nav -->
+        <div class="main-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="main-nav-wrap">
+                        <a href="javascript:" class="main-nav-toggle">
+                            <img src="image/icon-header/danhMucSanPham-icon.png" alt="">
+                            <span class="long">DANH MỤC SẢN PHẨM</span>
+                        </a>
+                    </div>
+
+                    <div class="feature location-picker" id="locationPicker">
+                        <img class="icon-location-picker" src="image/icon-header/banMuonGiaoHangToiDau-icon.png" alt="">
+                        <span class="text">Bạn muốn giao hàng tới đâu?
+                        </span>
+                    </div>
+
+                    <a class="feature recently" href="javascript:">
+                        <img src="image/icon-header-promo/banHangCungTiKi1-icon.png" alt="">
+                        Sản phẩm bạn đã xem
+                    </a>
+
+                    <a href="https://tiki.vn/tikinow?src=header_tikinow_fast" target="_blank"
+                        class="feature delivery-2h">
+                        <img class="icon-tikinow" src="image/icon-header/tiki-now.png" alt="">
+                        <span class="text-tiki-now">TikiNOW giao nhanh<br>
+                            Hàng trăm nghìn sản phẩm
+                        </span>
+                    </a>
+
+                    <div class="feature exclusive">
+                        <img class="icon-exclusive" src="image/icon-header/sanPhamChinhHieu-icon.png" alt="">
+                        <span class="text-exclusive">Tất cả sản phẩm<br>
+                            100% chính hiệu
+                        </span>
+                    </div>
+
+                    <a href="https://tiki.vn/doi-tra-de-dang?src=header_return_policy" target="_blank"
+                        class="feature return">
+                        <img src="image/icon-header/doiTraHang-icon.png" alt="">
+                        30 ngày đổi trả dễ dàng
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- end main-nav -->
+    </div>
+
+    <!-- end header -->
+
+    <!-- breadcrumb -->
+    <div class="breadcrumb-wrap">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="/">
+                        Trang chủ
+                    </a></li>
+                <li class="active" style="width: 1165px;">
+                    <span>
+                        Tiki Deal
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- end breadcrumb -->
+
+    <!-- main body -->
+    <div class="main-body">
+        <!-- tiki Deal Header -->
+        <div class="container">
+            <div class="tiki-deal-header">
+                <img class="icon-hot-deal" src="image/icon-body/sprite.png" alt="">
+                <div class="title">Tiki Deal</div>
+                <div class="text">
+                    Cập nhật hàng giờ tất cả những deal giảm giá đặc biệt trên Tiki. Hãy bookmark trang này và quay lại
+                    thường xuyên để không bỏ lỡ bạn nhé!
+                    <div class="fb-btn">
+                        <img src="image/icon-body/download.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end tiki Deal Header -->
+
+        <!-- main -->
+        <div class="container">
+            <div class="flex-container">
+                <!-- side-bar -->
+                <div class="side-bar">
+                    <div class="head">
+                        NGÀNH HÀNG QUAN TÂM
+                    </div>
+                    <ul class="filter-category">
+                        <li><label class="checkbox"><input type="checkbox">Điện Thoại, Máy Tính Bảng
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Điện Tử - Điện Lạnh
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Thiết Bị Số - Phụ Kiện Số
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Laptop &amp; Máy Vi Tính
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Máy Ảnh Máy Quay Phim
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Điện Gia Dụng
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Nhà Cửa Đời Sống
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Bách Hóa Online
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Đồ chơi, Mẹ &amp; Bé
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Làm Đẹp - Sức Khỏe
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Thời Trang
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Thể Thao &amp; Dã Ngoại
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Xe Máy, Ô tô, Xe Đạp
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Nhà Sách Tiki
+                            </label></li>
+                        <li><label class="checkbox"><input type="checkbox">Voucher - Dịch Vụ
+                            </label></li>
+                    </ul>
+                </div>
+                <!-- end side-bar -->
+
+                <!-- product-list -->
+                <div class="product-listing">
+                    <div class="tabs">
+                        <div class=" tab-item active">ĐANG BÁN</div>
+                        <div class=" tab-item">SẮP BÁN</div>
+                        <div class=" tab-item">ĐANG THEO DÕI</div>
+                        <div class=" tab-item">CHÁY HÀNG</div>
+                    </div>
+                    <div class="items">
+                        <di class="row">
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+
+                            <a class="col-md-3 col-sm-6 col-6 deal-item"
+                                href="https://tiki.vn/so-tay-tu-vung-120-trang-7-6-x-13-mau-ngau-nhien-p6836987.html?spid=6836989&amp;src=deal-hot&amp;2hi=1"
+                                target="_blank" data-id="6836987"
+                                data-title="Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên" data-brand=""
+                                data-price="10000" data-impresslistname="Deal Hot" data-impressposition="1">
+                                <div class="image">
+                                    <div class="discount-badge">
+                                        47%
+                                    </div>
+                                    <img class="lazy" style="display: inline;"
+                                        src="image/img-product/so-tay-tu-vung.jpg">
+                                </div>
+                                <div class="title">
+                                    <img class="icon-tikinow1" src="image/icon-body/tikiNow-icon.png" alt="">
+                                    Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên
+                                </div>
+                                <div class="price-sale">
+                                    10.000 ₫
+                                    <span class="price-regular">
+                                        19.000 ₫
+                                    </span>
+                                </div>
+                                <!-- <div class="deal-status">
+                                    <div class="process-bar"><span class="tikicon icon-hot_12"><img
+                                                src="image/icon-body/deal-status.png" alt=""></span>
+                                    </div>
+                                    <div class="started">
+                                        <div class="deal-count-down"><span class="time">
+                                                21 ngày 11:17:16
+                                            </span></div>
+                                    </div> -->
+                            </a>
+                        </di>
+                    </div>
+                </div>
+                <!-- end product-list -->
+            </div>
+            <!-- list page -->
+            <div class="list-pager">
+                <ul class="pagination">
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">></a></li>
+                </ul>
+            </div>
+            <!-- end list page -->
+        </div>
+        <!-- end main -->
+    </div>
+    <!-- end main body -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <!-- Begin MailChimp Signup Form -->
+        <div class="tiki-newsletter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 clearfix">
+                        <div class="tiki-newsletter-title clearfix">
+                            <img class="icon-newsletter" src="image/icon-footer/sprite2.png" alt="">
+                            <h3>Đăng ký nhận bản tin Tiki</h3>
+                            <h5>Đừng bỏ lỡ hàng ngàn sản phẩm và chương trình siêu hấp dẫn</h5>
+                        </div>
+                        <div class="mc-field-group">
+                            <input type="email" placeholder="Địa chỉ email của bạn" class="tiki-home-email form-control"
+                                id="mce-EMAIL">
+                            <span class="tiki-newsletter-helper"></span>
+                        </div>
+                        <button class="button btn btn-home-newsletter" data-index="0">Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End mc_embed_signup-->
+        <hr class="line-bg-body">
+        <div class="list-footer-nav">
+            <div class="container">
+                <div class="footer-nav" style="margin-right: 15px;width: 262px;">
+                    <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+                    <p class="hotline-number">
+                        Hotline đặt hàng: <a href="tel:18006963">1800-6963</a><br>
+                        <small>(Miễn phí , 8-21h kể cả T7, CN)</small>
+                    </p>
+                    <p class="hotline-number">
+                        Hotline chăm sóc khách hàng: <a href="tel:19006035">1900-6035</a><br>
+                        <small>(1000đ/phút , 8-21h kể cả T7, CN)</small>
+                    </p>
+                    <div class="nav-list">
+                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi" target="_blank">Các câu hỏi thường gặp</a>
+                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi/requests/new" target="_blank">Gửi yêu cầu hỗ
+                            trợ</a>
+                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi/categories/200126644" target="_blank">Hướng
+                            dẫn đặt hàng</a>
+                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi/categories/200123960" target="_blank">Phương
+                            thức vận chuyển</a>
+                        <a rel="nofollow" href="https://tiki.vn/doi-tra-de-dang" target="_blank">Chính sách đổi trả</a>
+                        <a rel="nofollow" href="https://tiki.vn/lp/tra-gop" target="_blank">Hướng dẫn mua trả góp</a>
+                        <a rel="nofollow" href="https://hotro.tiki.vn/hc/vi/articles/360000822643" target="_blank">Chính
+                            sách hàng nhập khẩu</a>
+
+                        <p class="hotline-number-normal">
+                            Hỗ trợ khách hàng: <a href="mailto:support@tiki.vn">support@tiki.vn</a>
+                        </p>
+
+                        <p class="hotline-number-normal">
+                            Báo lỗi bảo mật: <a href="mailto:security@tiki.vn">security@tiki.vn</a>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h4>VỀ TIKI</h4>
+                    <div class="nav-list">
+                        <a rel="nofollow" href="https://tiki.vn/gioi-thieu-ve-tiki" target="_blank">Giới thiệu Tiki</a>
+                        <a rel="nofollow" href="http://tuyendung.tiki.vn" target="_blank">Tuyển Dụng</a>
+                        <a rel="nofollow" href="https://tiki.vn/bao-mat-thanh-toan" target="_blank">Chính sách bảo mật
+                            thanh toán</a>
+                        <a rel="nofollow" href="https://tiki.vn/bao-mat-thong-tin-ca-nhan" target="_blank">Chính sách
+                            bảo mật thông tin cá nhân</a>
+                        <a rel="nofollow" href="https://hotro.tiki.vn/hc/vi/articles/115005575826" target="_blank">Chính
+                            sách giải quyết khiếu nại</a>
+                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi/articles/201971214" target="_blank">Điều
+                            khoản sử dụng</a>
+                        <a rel="nofollow" href="https://tiki.vn/hoi-sach-online" target="_blank">Hội Sách Online</a>
+                        <a rel="nofollow"
+                            href="http://hotro.tiki.vn/hc/vi/articles/204153170-Các-bước-sử-dụng-Tiki-xu-và-Mã-giảm-giá"
+                            target="_blank">Giới thiệu Tiki Xu</a>
+                        <a rel="nofollow" href="http://tiki.vn/tu-van" target="_blank">Tiki Tư Vấn</a>
+                        <a rel="nofollow" href="https://tiki.vn/chuong-trinh/ban-hang-doanh-nghiep" target="_blank">Bán
+                            hàng doanh nghiệp</a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h4>HỢP TÁC VÀ LIÊN KIẾT</h4>
+                    <div class="nav-list">
+                        <a rel="nofollow" href="https://tiki.vn/quy-che-hoat-dong-sgdtmdt" target="_blank">Quy chế hoạt
+                            động Sàn GDTMĐT</a>
+                        <!-- <a rel="nofollow" href="http://www.foody.vn" target="_blank">Foody.vn - Ăn gì ở đâu</a>
+                            <a rel="nofollow" href="http://www.ivivu.com" target="_blank">iVIVU.com - Đặt khách sạn giá rẻ</a> -->
+                        <a rel="nofollow" href="https://tiki.vn/ban-hang-cung-tiki" target="_blank">Bán hàng cùng
+                            Tiki</a>
+                    </div>
+                    <!-- <div class="nav-other partner">
+                            <a rel="nofollow" href="http://www.foody.vn" target="_blank">
+                                <img src="https://salt.tikicdn.com/assets/img/icon/logo-foody-vietnam@3x.png" />
+                            </a>
+                            <a rel="nofollow" href="http://www.ivivu.com" target="_blank">
+                                <img src="https://salt.tikicdn.com/assets/img/icon/logo-ivivu@3x.png" />
+                            </a>
+                        </div> -->
+                </div>
+                <div class="footer-nav">
+                    <h4>PHƯƠNG THỨC THANH TOÁN</h4>
+                    <div class="nav-other payment">
+                        <img class="icon-payment" src="image/icon-footer/visa-icon.png" alt="">
+                        <img class="icon-payment" src="image/icon-footer/masterCard-icon.png" alt="">
+                        <img class="icon-payment" src="image/icon-footer/jcb-icon.png" alt="">
+                        <img class="icon-payment" src="image/icon-footer/tienMat-icon.png" alt="">
+                        <img class="icon-payment" src="image/icon-footer/internetBanking-icon.png" alt="">
+                        <img class="icon-payment" src="image/icon-footer/traGop-icon.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+                    <div class="nav-other social-conn">
+                        <a rel="nofollow" href="https://www.facebook.com/tiki.vn/" target="_blank" title="Facebook">
+                            <img class="icon-nav-other" src="image/icon-footer/facebook-icon.png" alt="">
+                        </a>
+                        <a rel="nofollow" href="https://www.youtube.com/user/TikiVBlog" target="_blank" title="Youtube">
+                            <img class="icon-nav-other" src="image/icon-footer/youtube-icon.png" alt="">
+                        </a>
+                        <a rel="nofollow" href="http://zalo.me/589673439383195103" target="_blank" title="Zalo">
+                            <img class="icon-nav-other" src="image/icon-footer/zalo-icon.png" alt="">
+                        </a>
+                    </div>
+                    <h4 class="appstore-title">TẢI ỨNG DỤNG TRÊN ĐIỆN THOẠI</h4>
+                    <div class="nav-other app-store">
+                        <a rel="nofollow" href="https://itunes.apple.com/vn/app/id958100553" target="_blank"
+                            admicro-data-event="100127" admicro-data-auto="1" admicro-data-order="false">
+                            <img src="image/icon-footer/appleStore-icon.png" alt="">
+                        </a>
+                        <a rel="nofollow" href="https://play.google.com/store/apps/details?id=vn.tiki.app.tikiandroid"
+                            target="_blank" admicro-data-event="100128" admicro-data-auto="1"
+                            admicro-data-order="false">
+                            <img src="image/icon-footer/googleStore-icon.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="line-bg-body">
+
+        <address class="footer-address">
+            <div class="container">
+                <div class="address-office">
+                    <img src="image/icon-footer/diaChiVanPhong-icon.png" alt="" class="icon-location">
+                    <div class="info-address">
+                        <p class="add-real">
+                            <b>Địa chỉ văn phòng:</b>
+                            52 Út Tịch, phường 4, quận Tân Bình, thành phố Hồ Chí Minh
+                        </p>
+                        <p>
+                            Tiki nhận đặt hàng trực tuyến và giao hàng tận nơi, chưa hỗ trợ mua và nhận hàng trực tiếp
+                            tại văn phòng hoặc trung tâm xử lý đơn hàng
+                        </p>
+                    </div>
+                </div>
+                <div class="address-service">
+                    <div class="info-address">
+                        <p class="add-real">
+                            <b>Địa chỉ gửi hàng đổi/trả/bảo hành:</b>
+                            Trung tâm xử lý đơn hàng TIKI - Hẻm số 717, đường Tân Sơn, Phường 12, Quận Gò Vấp, TP. Hồ
+                            Chí Minh
+                        </p>
+                        <p>
+                            (Tham khảo <a rel="nofollow" href="https://tiki.vn/hau-mai" target="_blank">hướng dẫn đổi,
+                                trả, bảo hành</a> hoặc liên hệ <span class="number">1900-6035</span> để được hướng dẫn
+                            thêm)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </address>
+
+        <div class="footer-cpy-right">
+            <div class="container">
+                <div class="cpy-right-info">
+                    <h5>© 2016 - Bản quyền của Công Ty Cổ Phần Ti Ki - Tiki.vn</h5>
+                    <p>Giấy chứng nhận Đăng ký Kinh doanh số 0309532909 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh
+                        cấp ngày 06/01/2010</p>
+                </div>
+                <div class="cpy-right-info-right">
+                    <a href="https://hotro.tiki.vn/hc/vi/articles/115005575826" target="_blank">
+                        <img src="https://salt.tikicdn.com/ts/upload/3d/6c/27/216e535ff06b1b925796957a017cbedb.png"
+                            alt="" height="36px">
+                    </a>
+                    <a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=21201" target="_blank">
+                        <img src="image/icon-footer/boCongThuong-icon.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+</body>
+
+</html>
